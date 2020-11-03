@@ -1,5 +1,6 @@
 const fs = require('fs')
 const axios = require('axios')
+const https = require('https')
 
 let readContent = (filename) => {
     try {
@@ -32,12 +33,13 @@ inputs.forEach(i => {
 let args = process.argv.slice(2)
 let url = ''
 url = args[0]
-const BASE_URL = 'http://' + url
+const BASE_URL = url.includes('http') ? url :  'http://' + url
 const PATH = '/'
 
 bodies.forEach(body => {
     let api = axios.create({
         baseURL: BASE_URL,
+        httpsAgent: new https.Agent({ rejectUnauthorized: false })
     })
     console.log({'post to': BASE_URL + PATH})
     api.post(PATH, JSON.parse(body))
