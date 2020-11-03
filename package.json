@@ -1,0 +1,19 @@
+{
+  "name": "postman-like",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "post": "node post.js",
+    "get": "node get.js",
+    "delete": "node delete.js",
+    "put": "node put.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tkhadir",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "fs": "0.0.1-security"
+  }
+}
