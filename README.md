@@ -1,7 +1,7 @@
 # postman_like
 
 
-## to post body to an url int your json files in the current directory and run :
+## to post body to an url put your json files in the current directory and run :
 ```
 npm run post
 ```
